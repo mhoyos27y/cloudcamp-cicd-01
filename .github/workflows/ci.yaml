@@ -1,0 +1,7 @@
+on: #trigger
+  push: #evento
+jobs:
+  hello-world: #identificador del job
+    runs-on: ubuntu-slim #runner o maquina donde se ejecuta
+    steps: #paso que va a ejecutar
+      - run: echo "Hello world desde GitHubActions"
