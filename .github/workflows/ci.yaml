@@ -1,7 +1,10 @@
+name: Hello World 1
 on: #trigger
   push: #evento
 jobs:
   hello-world: #identificador del job
+    name: Hello World 2
     runs-on: ubuntu-slim #runner o maquina donde se ejecuta
     steps: #paso que va a ejecutar
-      - run: echo "Hello world desde GitHubActions"
+      - name: Hello World 3
+        run: echo "Hello world desde GitHubActions"
