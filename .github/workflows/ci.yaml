@@ -14,3 +14,10 @@ jobs:
     steps: #paso que va a ejecutar
       - name: checkout Job 2
         uses: actions/checkout@v7
+
+  job-3-needs: #identificador del job
+    runs-on: ubuntu-slim #runner o maquina donde se ejecuta
+    needs: job-1
+    steps: #paso que va a ejecutar
+      - name: checkout Job 2
+        uses: actions/checkout@v7
