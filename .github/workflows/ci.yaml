@@ -1,9 +1,15 @@
 name: Hello World 1
 on: #trigger
   push: #evento
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   job-1: #identificador del job
     name: Hello World Job 1
+    if: ${{ github.event.name == 'pull_request' }}
     runs-on: ubuntu-slim #runner o maquina donde se ejecuta
     steps: #paso que va a ejecutar
       - name: Hello World Step Job 1
